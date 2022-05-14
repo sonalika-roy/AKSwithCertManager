@@ -1,0 +1,24 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: ${name}
+  namespace: default
+spec:
+  acme:
+    email: ${email}
+    server: ${server}
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt
+    solvers:
+      - dns01:
+          azuredns:
+            managedIdentity:
+            # client id of the node pool managed identity (can not be set at the same time as resourceID)
+            clientID: module.aks.kubelet_id
+            subscriptionID: 0f629d89-46bc-474b-941a-c7140441a426
+            # Azure AD tenant Id
+            tenantID: 72f988bf-86f1-41af-91ab-2d7cd011db47
+            # ResourceGroup name where dns zone is provisioned
+            resourceGroupName: srtest-lz01-rg
+            hostedZoneName: sonalika.com

@@ -1,0 +1,25 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-prod
+  namespace: cert-manager
+spec:
+  acme:
+    email: ""
+    server: "https://acme-v02.api.letsencrypt.org/directory"
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - dns01:
+        azureDNS:
+          subscriptionID: ""
+          environment: AzurePublicCloud
+          resourceGroupName: ""
+          hostedZoneName: ""
+          tenantID: ""
+          clientID: ""
+          # Secret with the password
+          clientSecretSecretRef:
+            name: azuredns-config
+            key: client-secret

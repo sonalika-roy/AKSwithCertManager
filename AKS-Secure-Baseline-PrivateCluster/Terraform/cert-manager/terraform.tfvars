@@ -1,0 +1,5 @@
+access_key = ""
+state_sa_name = ""
+container_name = ""
+prefix = "srtest"
+private_dns_zone_name = "privatelink.eastus.azmk8s.io"
