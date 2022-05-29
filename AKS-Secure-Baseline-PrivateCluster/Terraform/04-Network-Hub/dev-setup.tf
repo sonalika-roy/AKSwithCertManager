@@ -66,11 +66,11 @@ module "create_linuxsserver" {
 #######################
 
 variable "admin_password" {
-  default = "Acc1234$$"
+  default = ""
 }
 
 variable "admin_username" {
-  default = "sonalikaroy"
+  default = ""
 
 }
 
