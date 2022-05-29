@@ -1,8 +1,8 @@
 prefix  = "akscs"
 
-state_sa_name = "srakstfstate3"
+state_sa_name = ""
 container_name = "akscs"
-access_key = "cpmfxT4vUMzu+74Qx06Kf5yHrmjzazI8mAyzCXzr6aTkGo5obvp3QlHLjMQYkRXsuHbnZaYwIhYJ+AStPAw4Kw=="
+access_key = ""
 
 
 # OPTIONAL:  Update the mongodb_secret with a username and password
