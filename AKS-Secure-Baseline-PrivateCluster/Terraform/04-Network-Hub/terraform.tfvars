@@ -1,5 +1,5 @@
 admin_password = ""
-admin_username = "sonalikaroy"
+admin_username = ""
 location="eastus"
 hub_prefix="srtest-aks-hub"
 source_address_prefix= ""
